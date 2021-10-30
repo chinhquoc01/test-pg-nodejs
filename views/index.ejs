@@ -1,0 +1,16 @@
+<% include head %>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome tooo <%= title %></p>
+
+    <a href='/todos/add'> Add todo</a>
+    <% if(alltd != null){ %>
+      <ul>
+        <% alltd.forEach(function(td) { %>
+            <li><%= td.todo_id %> - <%= td.description %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+    
+  </body>
+</html>
